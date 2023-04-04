@@ -1,0 +1,76 @@
+{   
+   "id": "w15ps-compendia-srd",   
+   "title": "w15p's SRD Compendia of Useful Things™",   
+   "description": "A simple SRD-only module that I'm using to both slowly customize things to my liking and to learn more about the foundry platform. Currently very much a work in progress but functional.",   
+   "authors": [
+    {
+    "name": "w15p",
+    "discord": "w15p#3273"
+    }
+   ],
+   "version": "0.1.0",
+   "url": "https://github.com/w15p/w15ps-compendia-srd",
+   "download": "https://github.com/w15p/w15ps-compendia-srd/releases/latest/module.zip",
+   "compatibility": {
+    "verified": "10.291"
+   },
+   "system": [
+    "dnd5e"
+   ],
+   "esmodules": [
+    "./scripts/w15ps.mjs"
+   ],
+   "packs": [
+    {
+        "name": "w15ps-grimoire",
+        "label": "w15p's Grimoire",
+        "system": "dnd5e",
+        "path": "./packs/w15ps-grimoire.db",
+        "type": "Item"
+    },
+    {
+        "name": "w15ps-wares",
+        "label": "w15p's Wares",
+        "system": "dnd5e",
+        "path": "./packs/w15ps-wares.db",
+        "type": "Item"
+    }
+   ],
+   "relationships": {
+    "requires": [{
+      "id": "midi-qol",
+      "type": "module",
+      "compatibility": {
+        "verified": "10.0.32"
+      }
+    },
+    {
+      "id": "JB2A_DnD5eenmagic",
+      "type": "module",
+      "compatibility": {
+        "verified": "0.5.5.01"
+      }
+    },
+    {
+      "id": "itemacro",
+      "type": "module",
+      "compatibility": {
+        "verified": "1.8.0"
+      }
+    },
+    {
+      "id": "tokenmagic",
+      "type": "module",
+      "compatibility": {
+        "verified": "0.6.1.2"
+      }
+    },
+    {
+      "id": "sequencer",
+      "type": "module",
+      "compatibility": {
+        "verified": "2.412"
+      }
+    }]
+  }
+ }
