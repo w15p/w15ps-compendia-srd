@@ -11,24 +11,37 @@ export class Wand {
 
     static async use(onUseWorkflow) {
         const charges = onUseWorkflow.item.system.uses.value;
-        const content = `<center>How many charges would you like to use? <i>(${charges} available)</i></center><br/>`
 
+        if (charges === 0) {
+            ui.notifications.error("You have no remaining charges.");
+            return;
+        }
+
+        
         async function dialogAsync(){
+            let content = `<center>How many charges would you like to use?<br/><i>(${charges} available)</i></center><br/>`;
+            content += '<center><form><select name="charges" id="choose">';
+            Array.fromRange(charges).forEach(charge => content += `<option value="${(Number(charge)+1)}">${(Number(charge)+1)}</option>`);
+            content += '</select></form></center><br/>';
+            const dialogOptions = {
+                width: 300
+            }
             return await new Promise(async (resolve) => {
                 new Dialog({
-                    title : `${onUseWorkflow.item.name}` , 
+                    title : `${onUseWorkflow.item.name}`, 
                     content,
-                    buttons: Array.fromRange(charges).map(i=>({label: (i+1).toString(), callback: (html) => {
-                        resolve(i);               
-                    }}))
-                }).render(true);
+                    buttons: {
+                        use: {label: "Use", icon: '<i class="fa-duotone fa-wand-sparkles"></i>', callback: () => {
+                            resolve(choose.value);
+                        }}
+                    },
+                    default: 'use'
+                }, dialogOptions).render(true);
             })
         }
-        const castLevel = await dialogAsync()+1;
-        if(!castLevel) return {};
-        onUseWorkflow.castData.castLevel = castLevel;
+        let castLevel = await dialogAsync();
+        onUseWorkflow.castData.castLevel = Number(castLevel);
         await onUseWorkflow.item.update({"system.uses.value": charges - castLevel});
-
         await this.#expend(onUseWorkflow);
     }   
 
@@ -38,7 +51,6 @@ export class Wand {
             wandFlavor = `using all charges of the ${onUseWorkflow.item.name}`;
             var wandCheck = new Roll("1d20");
             await wandCheck.evaluate();
-            console.log(wandCheck);
             if (wandCheck.total === 1) {
                 wandFlavor = wandFlavor + ` and it disentegrates to dust`
                 await onUseWorkflow.item.delete();

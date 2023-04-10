@@ -16,3 +16,11 @@ __Scripts__
 * scripts/w15ps.mjs
 * scripts/items/wand.js
 * scripts/spells/magic_missile.js
+
+__Reuires__
+* midi-qol
+* dae
+* JB2A_DnD5e (jb2a_patreon is recommended because it is _so_ much prettier)
+* itemacro
+* tokenmagic
+* sequencer
