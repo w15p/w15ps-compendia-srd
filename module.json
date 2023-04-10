@@ -59,7 +59,7 @@
       }
     },
     {
-      "id": "libwrapper",
+      "id": "lib-wrapper",
       "type": "module",
       "compatibility": {
         "verified": "1.12.11.0"
