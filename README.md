@@ -24,7 +24,7 @@ __Scripts__
 __Required Modules__
 * midi-qol
 * socketlib (required by midi-qol)
-* libwrapper (required by midi-qol)
+* lib-wrapper (required by midi-qol)
 * dae
 * JB2A_DnD5e (jb2a_patreon is recommended because it is _so_ much prettier)
 * itemacro
