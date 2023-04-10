@@ -4,7 +4,7 @@ A simple SRD-based module that I'm using to both _slowly_ customize things to my
 
 __Compendia__
 
-w15p' Grimoire:
+w15p's Grimoire:
 * Faerie Fire (includes visual effect, grants advantage and automatically deletes placed template)
 * Magic Missile (includes sequencer/jb2a visual effects, assignment of missiles per target and damage application)
 
@@ -21,10 +21,19 @@ __Scripts__
 * scripts/spells/magic_missile.js
 * scripts/spells/faerie_fire.js
 
-__Reuires__
+__Required Modules__
 * midi-qol
+* socketlib (required by midi-qol)
+* libwrapper (required by midi-qol)
 * dae
 * JB2A_DnD5e (jb2a_patreon is recommended because it is _so_ much prettier)
 * itemacro
 * tokenmagic
 * sequencer
+
+__Recommended Modules__
+* times-up (necessary for auto-expiry of effects)
+* dfreds-convenient-effects (necessary for auto-expiry of effects like Faerie Fire)
+* dfreds-effects-panel
+* token-action-hud-core
+* token-action-hud-dnd5e
