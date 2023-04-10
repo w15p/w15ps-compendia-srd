@@ -6,7 +6,7 @@ __Compendia__
 
 w15p' Grimoire:
 * Faerie Fire (includes visual effect, grants advantage and automatically deletes placed template)
-* Magic Missile (includes seuencer/jb2a visual effects, assignment of missiles per target and damage application)
+* Magic Missile (includes sequencer/jb2a visual effects, assignment of missiles per target and damage application)
 
 w15p's Wares:
 * Wand of Magic Missiles (includes charge-based upcasting of Magic Missile, handles chance of wand deletion when all charges are spent)
