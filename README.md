@@ -5,20 +5,21 @@ A simple SRD-based module that I'm using to both _slowly_ customize things to my
 __Compendia__
 
 w15p' Grimoire:
-* Faerie Fire
-* Magic Missile
+* Faerie Fire (includes visual effect, grants advantage and automatically deletes placed template)
+* Magic Missile (includes seuencer/jb2a visual effects, assignment of missiles per target and damage application)
 
 w15p's Wares:
-* Wand of Magic Missiles
+* Wand of Magic Missiles (includes charge-based upcasting of Magic Missile, handles possible deletion on cahrge expiry)
 
 w15p's Talents and Feats:
-* Round Robin
+* Round Robin (applies spell effects round-robin fashion based on targeting order)
 
 __Scripts__
 
 * scripts/w15ps.mjs
 * scripts/items/wand.js
 * scripts/spells/magic_missile.js
+* scripts/spells/faerie_fire.js
 
 __Reuires__
 * midi-qol
