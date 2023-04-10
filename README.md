@@ -1,4 +1,4 @@
-# w15ps-compendia
+# w15ps-srd
 
 A simple SRD-based module that I'm using to both _slowly_ customize things to my liking and to learn more about the foundry platform. Currently very much a work in progress but functional.
 
