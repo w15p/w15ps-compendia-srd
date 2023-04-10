@@ -11,6 +11,9 @@ w15p' Grimoire:
 w15p's Wares:
 * Wand of Magic Missiles
 
+w15p's Talents and Feats:
+* Round Robin
+
 __Scripts__
 
 * scripts/w15ps.mjs
