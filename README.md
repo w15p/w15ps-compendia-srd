@@ -9,7 +9,7 @@ w15p' Grimoire:
 * Magic Missile (includes seuencer/jb2a visual effects, assignment of missiles per target and damage application)
 
 w15p's Wares:
-* Wand of Magic Missiles (includes charge-based upcasting of Magic Missile, handles possible deletion on cahrge expiry)
+* Wand of Magic Missiles (includes charge-based upcasting of Magic Missile, handles chance of wand deletion when all charges are spent)
 
 w15p's Talents and Feats:
 * Round Robin (applies spell effects round-robin fashion based on targeting order)
