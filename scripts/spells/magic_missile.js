@@ -20,21 +20,21 @@ export class MagicMissile {
         let targetMissiles = new Map();
         let actor = canvas.tokens.controlled[0].actor;
         let roundRobin = actor.getFlag('w15ps-srd', 'roundRobin');
-        if ((roundRobin === undefined || !roundRobin) && numTargets > 1) {
+        if ((roundRobin === undefined || !roundRobin) && numTargets > 1 && numMissiles > numTargets) {
             async function targetDialog(){
                 let targetIcons = new Map();
                 Array.from(onUseWorkflow.hitTargets).map(t => targetIcons.set(t.id, t.document.texture.src));
                 let content = `<center>Choose how many missiles to apply to each target<br/><i>(${numMissiles} available)</i></center>
                     <form class="flexcol"><table style="width: 100%; border: none"><tbody>`;
                 targetIcons.forEach((v, k) => {
-                    content += `<tr style="background-img: url(../ui/denim075.png) repeat; background: rgba(0, 0, 0, 0.05);"><td align="center"><img src="${v}" width="50px" style="border: 0px" /></td><td><select id="${k}_">`;
+                    content += `<tr><td align="center"><img src="${v}" width="50px" style="border: 0px" /></td><td><select id="${k}_">`;
                     Array.fromRange(numMissiles).forEach(missile => content += `<option value="${(Number(missile)+1)}">${(Number(missile)+1)}</option>`);
                     content += '</select></td></tr>';
                 });
                 content += '</tbody></table></form>';
                 const dialogOptions = {
                     width: 350,
-                    height: 150 + numTargets * 50
+                    height: 155 + numTargets * 55
                 }
                 return await new Promise(async (resolve) => {
                     new Dialog({
